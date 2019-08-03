@@ -8,3 +8,5 @@ https://tuchong.com/community spider，可爬取图虫网指定标签下图片
 
 没有python运行环境的同学可以[下载](https://github.com/gitxxp/tuchongspider/releases/tag/1)打包好的exe文件
 
+## 2019.8.04更新
+支持多线程

@@ -1,11 +1,10 @@
-import os,threading,sys
+import os,threading
 import re
 import json
 import requests
 import time
 import urllib.parse
 import random
-#import traceback
 import urllib
 task = []
 head = {'Accept': '*/*',
@@ -81,20 +80,20 @@ def get_jpg(url):#顾名思义，获取jpg的url
 #定义下载器模块
 def download(theme,n):
     global name,task
-    # for i in get_jpg:
+    
     while True:
         try:
             url = task.pop()
-        # name = img['alt']+url[-4:] #图片重名命,以后再写
+       
         except:
             time.sleep(5)
             print('图片列表空')
             
-        name += 1
-        name2 = url.split('/')[-1] #随机命名防止重复
+        name += 1 #计数器
+        name2 = url.split('/')[-1] #命名
         download_file = os.path.join(theme,name2) #跨平台兼容 融合文件夹路径+图片名
         # print(url)
-        print('任务列表数：%s' % len(task))
+        print('列表任务数：%s' % len(task))
         try:
             print("正在下载第%d套图，一共%d套图" % (n, len(cantclick_list)))
             urllib.request.urlretrieve(url,filename=download_file)
@@ -169,9 +168,6 @@ else:
         threading.Thread(target=download,args=(theme,n)).start()
         print('下载线程-%s启动'%iv)
     
-print('hi')
-# thread1.join()
-# while len(cantclick_list) >= 0:
-#             print('爬取结束') 
-#             sys.exit(0)
+print('https://github.com/gitxxp')
+
 

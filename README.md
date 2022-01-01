@@ -10,3 +10,5 @@ https://tuchong.com/community spider，可爬取图虫网指定标签下图片
 
 ## 2019.8.04更新
 支持多线程
+## 2022.1.1更新
+已失效
